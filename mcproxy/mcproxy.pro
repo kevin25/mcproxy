@@ -18,6 +18,21 @@ tester {
     LIBS += -L/usr/lib -lboost_regex
 }
 
+
+unit_tests {
+    CONFIG-=mcproxy  #removes default mode
+    message("target unit_tests")
+
+    TARGET = unit_tests 
+    DEFINES += UNIT_TESTS 
+    
+    HEADERS += testing/ut_bootstrap.hpp \
+           testing/ut_minimal.hpp \
+           testing/ut_suite.hpp \
+           #test files
+           testing/test_my_data.hpp
+}
+
 mcproxy { #default mode
     message("target mcproxy")
     TARGET = mcproxy
@@ -123,7 +138,7 @@ HEADERS += include/hamcast_logging.h \
            include/parser/token.hpp \
            include/parser/configuration.hpp \
            include/parser/parser.hpp \
-           include/parser/interface.hpp
+           include/parser/interface.hpp \
 
 LIBS += -L/usr/lib -lpthread 
 
