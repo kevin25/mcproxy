@@ -65,7 +65,7 @@ Build Mcproxy in release mode:
 Further building modes for troubleshooting and developers:
 
     qmake CONFIG+=debug
-    qmake CONFIG+=unit_tests [CONFIG+=debug]
+    qmake CONFIG+=unit_tests
     qmake CONFIG+=tester [CONFIG+=debug]
 
 * debug: In debug mode Mcproxy provides logging output from trace level to error level. 

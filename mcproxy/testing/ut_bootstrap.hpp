@@ -25,12 +25,12 @@
 #ifdef UNIT_TESTS
 
 #include "testing/ut_suite.hpp"
-#include "testing/test_my_data.hpp"
+#include "testing/test_addr_storage.hpp"
 
 void ut_bootstrap(){
     ut_suite test_suite;
     
-    test_suite.add_test_fun(test_my_data_1,4);
+    test_suite.add_test_fun(test_address_storage());
 
     test_suite.run_test_suite();
 }

@@ -18,11 +18,10 @@ tester {
     LIBS += -L/usr/lib -lboost_regex
 }
 
-
 unit_tests {
     CONFIG-=mcproxy  #removes default mode
     message("target unit_tests")
-
+    CONFIG+=debug
     TARGET = unit_tests 
     DEFINES += UNIT_TESTS 
     
@@ -30,7 +29,7 @@ unit_tests {
            testing/ut_minimal.hpp \
            testing/ut_suite.hpp \
            #test files
-           testing/test_my_data.hpp
+           testing/test_addr_storage.hpp
 }
 
 mcproxy { #default mode
