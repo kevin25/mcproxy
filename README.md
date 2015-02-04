@@ -68,9 +68,11 @@ Further building modes for troubleshooting and developers:
     qmake CONFIG+=unit_tests
     qmake CONFIG+=tester [CONFIG+=debug]
 
-* debug: In debug mode Mcproxy provides logging output from trace level to error level. 
-* unit_tests: This mode provides a self test binary. 
-* tester: Tester is an high configurable multicast test tool, with advanced features like handover simulations, generation of measurement series, ...
+* __debug__: In debug mode Mcproxy provides logging output from trace level
+to error level. 
+* __unit_tests__: This mode provides a self test binary. 
+* __tester__: Tester is an high configurable multicast test tool, with 
+advanced features like handover simulations and generation of measurement series.
 
 Installation
 ============
